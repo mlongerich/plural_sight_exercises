@@ -13,17 +13,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'puma' #instead of webbrick
 gem 'bootstrap-sass'
+gem 'simple_form'
+gem 'redcarpet' #markdown to html parsing
+gem 'devise' #authentication and authorization
 
 group :development, :test do
   gem 'byebug'
   gem 'spring'
   gem 'spring-commands-rspec' #used if using spring and rspec
+  gem 'spring-commands-cucumber' #used if using spring and cucumber
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do
